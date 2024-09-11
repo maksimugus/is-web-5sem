@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.logotype {
+    display: flex;
+
+}
+
+.logotype img {
+    width: 60px;
+}
+
+.advantages {
+
+}
+
+.nav-footer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
