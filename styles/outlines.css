@@ -1,4 +1,4 @@
-nav {
+header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -6,13 +6,33 @@ nav {
     align-items: center;
 }
 
-.menu-nav {
+nav {
     display: flex;
+}
+
+.menu-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.start-page {
+    text-align: center;
+}
+
+.slogan {
+
 }
 
 .logotype {
     display: flex;
-
 }
 
 .logotype img {
@@ -23,12 +43,26 @@ nav {
 
 }
 
-.nav-footer {
+.trips-cards {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.trip-card {
+
+}
+
+.blog {
+    display: flex;
+}
+
+footer {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-.menu-footer {
+.footer-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
