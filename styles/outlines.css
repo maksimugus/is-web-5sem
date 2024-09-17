@@ -1,9 +1,35 @@
+/* подключаем шрифт */
+@font-face {
+    font-family: 'Pelmen';
+    src: url('fonts/Pelmeshka/Pelmeshka.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Miroslav Regular';
+    src: url('fonts/Miroslav/Мирослав Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Miroslav Bold';
+    src: url('fonts/Miroslav/Мирослав Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Intro Head';
+    src: url('fonts/Intro Head R/IntroHeadR-Base.otf') format('truetype');
+}
+
 header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 30px;
+}
+
+main {
+    padding: 0 30px;
 }
 
 nav {
@@ -17,6 +43,9 @@ nav {
     gap: 20px;
     justify-content: space-between;
     list-style: none;
+
+    font-size: 20px;
+    font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
 a {
@@ -25,22 +54,50 @@ a {
 
 .start-page {
     text-align: center;
+    margin: 50px 0;
 }
 
 .slogan {
-
+    font-size: 30px;
+    font-family: 'Pelmen', Arial, sans-serif;
 }
 
 .logotype {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.logo-img {
+    display: flex;
+    padding-right: 15px;
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
 .logotype img {
-    width: 60px;
+    width: 80px;
 }
 
 .advantages {
+    margin: 50px 0;
+}
 
+h2 {
+    font-size: 32px;
+    font-family: 'Miroslav Bold', Arial, sans-serif;
+}
+
+
+.advantages-content {
+    font-size: 16px;
+    font-family: 'Intro Head', Arial, sans-serif;
 }
 
 .trips-cards {
@@ -49,17 +106,43 @@ a {
     justify-content: space-evenly;
 }
 
+.sales {
+    margin: 50px 0;
+}
+
+.trips {
+    margin: 50px 0;
+}
+
 .trip-card {
 
 }
 
 .blog {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 50px 0;
+}
+
+.blog-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: nowrap;*/
+    /*justify-content: space-evenly;*/
+}
+
+.ascii-picture {
+    /*margin-top: 50px;*/
 }
 
 footer {
     display: grid;
     grid-template-columns: auto auto;
+    background-color: #aedfff;
+    padding: 20px 30px 30px 30px; /* top, right, bottom, left */
 }
 
 .footer-menu {
