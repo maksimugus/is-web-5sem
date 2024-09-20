@@ -1,4 +1,3 @@
-/* подключаем шрифт */
 @font-face {
     font-family: 'Pelmen';
     src: url('fonts/Pelmeshka/Pelmeshka.ttf') format('truetype');
@@ -19,6 +18,15 @@
     src: url('fonts/Intro Head R/IntroHeadR-Base.otf') format('truetype');
 }
 
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: 'Miroslav Bold', Arial, sans-serif;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -26,14 +34,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-}
-
-main {
-    padding: 0 30px;
-}
-
-nav {
-    display: flex;
 }
 
 .menu-main {
@@ -48,8 +48,8 @@ nav {
     font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
-a {
-    text-decoration: none;
+main {
+    padding: 0 30px;
 }
 
 .start-page {
@@ -81,17 +81,8 @@ a {
     font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
-.logotype img {
-    width: 80px;
-}
-
 .advantages {
     margin: 50px 0;
-}
-
-h2 {
-    font-size: 32px;
-    font-family: 'Miroslav Bold', Arial, sans-serif;
 }
 
 
@@ -100,18 +91,18 @@ h2 {
     font-family: 'Intro Head', Arial, sans-serif;
 }
 
-.trips-cards {
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-}
-
 .sales {
     margin: 50px 0;
 }
 
 .trips {
     margin: 50px 0;
+}
+
+.trips-content {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
 }
 
 .trip-card {
@@ -128,14 +119,6 @@ h2 {
 .blog-content {
     display: grid;
     grid-template-columns: auto auto;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*flex-wrap: nowrap;*/
-    /*justify-content: space-evenly;*/
-}
-
-.ascii-picture {
-    /*margin-top: 50px;*/
 }
 
 footer {
@@ -146,8 +129,5 @@ footer {
 }
 
 .footer-menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
+    list-style: none;
 }
