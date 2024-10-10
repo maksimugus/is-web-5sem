@@ -20,6 +20,7 @@
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 h2 {
@@ -30,12 +31,12 @@ h2 {
 
 h3 {
     font-size: 24px;
-    font-family: 'Miroslav Bold', Arial, sans-serif;
+    font-family: 'Intro Head', Arial, sans-serif;
 }
 
 h4 {
     font-size: 19px;
-    font-family: 'Miroslav Bold', Arial, sans-serif;
+    font-family: 'Intro Head', Arial, sans-serif;
 }
 
 h5 {
@@ -50,6 +51,10 @@ p {
     margin: 0;
 }
 
+section {
+    margin: 50px 0;
+}
+
 .advantages-content li {
     font-size: 16px;
     font-family: 'Intro Head', Arial, sans-serif;
@@ -62,6 +67,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
+    color: #EBF9D6;
+    background-color: #90AE64;
 }
 
 .menu-main {
@@ -82,7 +89,6 @@ main {
 
 .start-page {
     text-align: center;
-    margin: 50px 0;
 }
 
 .slogan {
@@ -109,28 +115,31 @@ main {
     font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
-.advantages {
-    margin: 50px 0;
+.button {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 15px;
+    background-color: #C2D97E;
 }
 
-.advantages-content {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    gap: 40px;
+.advantages {
+}
+
+.advantages-list {
+    list-style: none;
+    gap: 20px;
+    font-family: 'Intro Head', Arial, sans-serif;
 }
 
 .sales {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
     gap: 40px;
 }
 
 .trips {
     display: flex;
     flex-direction: column;
-    margin: 50px 0;
     gap: 40px;
 }
 
@@ -204,7 +213,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 50px 0;
 }
 
 .blog-content {
@@ -215,8 +223,9 @@ main {
 footer {
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #aedfff;
-    padding: 20px 30px 30px 30px; /* top, right, bottom, left */
+    color: #EBF9D6;
+    background-color: #90AE64;
+    padding: 20px 30px; /* top, right, bottom, left */
 }
 
 .footer-menu {
