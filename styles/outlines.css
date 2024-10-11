@@ -23,6 +23,12 @@ a {
     color: inherit;
 }
 
+h1 {
+    font-size: 36px;
+    font-family: 'Miroslav Regular', Arial, sans-serif;
+    margin: 0;
+}
+
 h2 {
     font-size: 32px;
     font-family: 'Miroslav Bold', Arial, sans-serif;
@@ -32,11 +38,13 @@ h2 {
 h3 {
     font-size: 24px;
     font-family: 'Intro Head', Arial, sans-serif;
+    margin: 0;
 }
 
 h4 {
     font-size: 19px;
     font-family: 'Intro Head', Arial, sans-serif;
+    margin: 0;
 }
 
 h5 {
@@ -45,15 +53,32 @@ h5 {
     margin: 0;
 }
 
-p {
+p, del {
     font-size: 16px;
     font-family: 'Intro Head', Arial, sans-serif;
     margin: 0;
 }
 
-section {
-    margin: 50px 0;
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 0 60px;
+    flex: 1; /* Основной контент занимает доступное пространство */
+}
+
+
+section {
+    margin: 100px 0;
+}
+
 
 .advantages-content li {
     font-size: 16px;
@@ -83,18 +108,78 @@ header {
     font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
-main {
-    padding: 0 60px;
+@media (max-width: 700px) {
+    main {
+        padding: 0 30px;
+    }
+
+    section {
+        margin: 50px 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+    }
+
+    .logo-img {
+        padding-right: 10px;
+    }
+
+    .logotype {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
 }
 
 .start-page {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: center; /* Горизонтальное центрирование */
+    justify-content: center; /* Вертикальное центрирование */
+
     text-align: center;
+    position: relative;
+    width: 100%;
+    height: 450px; /* Высота на всю высоту экрана */
+    overflow: hidden; /* Скрыть переполнение */
+
+    border-radius: 15px;
+}
+
+.start-page__image {
+    position: absolute; /* Позволяет изображению разместиться поверх секции */
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обложка, чтобы изображение заполнило всю секцию */
+    transform: translate(-50%, -50%); /* Центрирование изображения */
+    z-index: -1;
+    filter: blur(1px); /* Добавление размытия */
+    opacity: 0.7; /* Уровень прозрачности для дымки */
+}
+
+.start-page p,
+.start-page h1 {
+    position: relative; /* Убедитесь, что текст над изображением */
+    color: #000000; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
 }
 
 .slogan {
     font-size: 30px;
     font-family: 'Pelmen', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 .logotype {
     display: flex;
@@ -116,20 +201,49 @@ main {
 }
 
 .button {
-    display: inline-block;
-    padding: 0 10px;
+    display: inline-block; /* Делает кнопку инлайн-блоком для автоматической ширины */
+    padding: 10px 15px;
     border-radius: 15px;
     background-color: #C2D97E;
 }
 
 .advantages {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.advantages__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .advantages-list {
-    list-style: none;
-    gap: 20px;
-    font-family: 'Intro Head', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
+
+.advantages-list__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.advantages-list__item-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.advantages-list__item-icon {
+    margin-right: 20px;
+}
+
 
 .sales {
     display: flex;
@@ -137,19 +251,35 @@ main {
     gap: 40px;
 }
 
+.sales__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 .trips {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+}
+
+.trips__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .trips-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 30px;
 }
 
 .trip-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -157,10 +287,22 @@ main {
     background-color: #EBF9D6;
 }
 
+.trip-card__discount-badge {
+    position: absolute; /* Абсолютное позиционирование */
+
+    background-color: #eb403d; /* Красный фон */
+    color: #000000; /* Черный текст */
+    padding: 10px 15px; /* Отступы внутрь */
+    border-radius: 15px 0 15px 0; /* Скругление углов */
+
+    z-index: 1; /* Чтобы элемент был на переднем плане */
+}
+
 .trip-card__picture {
-    width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0 0;
+    width: 100%; /* Полная ширина родительского элемента */
+    border-radius: 15px 15px 0 0; /* Скругление верхних углов */
+    height: 300px;
+    object-fit: cover;
 }
 
 .trip-card__description {
@@ -215,9 +357,39 @@ main {
     flex-wrap: nowrap;
 }
 
+.blog__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.acquaintance__title {
+    margin-bottom: 40px;
+}
+
 .blog-content {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 3fr 2fr 2fr;
+    gap: 30px;
+}
+
+.blog-content__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-content__image {
+    border-radius: 15px;
+    width: 100%;
+    height: 300px; /* Установите фиксированную высоту для всех изображений */
+    object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+    margin-bottom: 20px;
+}
+
+.blog-content__date {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -229,5 +401,272 @@ footer {
 }
 
 .footer-menu {
+    display: flex;
+    flex-direction: column;
     list-style: none;
+    gap: 20px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    padding: 10px 15px;
+    background-color: #C2D97E; /* Цвет фона кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 15px; /* Скругление углов */
+    cursor: pointer; /* Курсор при наведении */
+    display: none; /* Скрываем кнопку по умолчанию */
+    transition: background-color 0.6s; /* Плавный переход для фона */
+}
+
+.scroll-to-top:hover {
+    background-color: #90AE64; /* Цвет фона при наведении */
+}
+
+
+/* Туры */
+.details {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+}
+
+.details img {
+    width: 100%; /* Полная ширина родительского элемента */
+    border-radius: 15px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.details__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.details__description {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    background-color: #EBF9D6;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative; /* Позиционирование для детей */
+}
+
+.details__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    position: relative; /* Позволяет размещать псевдоэлемент внутри этого контекста */
+    height: 100%; /* Высота линии, равная высоте элемента */
+
+}
+
+.details__item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px; /* Удаление линии от правого края элемента */
+    width: 1px; /* Ширина линии */
+    min-height: 100%; /* Высота линии, равная высоте элемента */
+    background-color: #000; /* Цвет линии */
+    display: block; /* Для отображения линии */
+    bottom: 0; /* Устанавливает линию от верха до низа */
+}
+
+.details__item:last-child::after {
+    display: none; /* Убираем линию у последнего элемента */
+}
+
+.details__money {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.details__money-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: #90AE64;
+    margin-bottom: 50px;
+}
+
+.details__contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.details__contact-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.details__contact-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details__contact-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details__contact-image {
+    width: 150px; /* Фиксированная ширина контейнера изображения */
+    height: 80%; /* Фиксированная высота контейнера изображения */
+    overflow: hidden; /* Обрезает содержимое, выходящее за границы контейнера */
+    border-radius: 10px; /* Закругление углов контейнера (по желанию) */
+}
+
+.details__contact-image img {
+    width: 100%; /* Задает ширину изображения 100% от ширины контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover; /* Обрезает изображение, сохраняя центральную часть */
+    object-position: center; /* Центрировать изображение в контейнере */
+}
+
+.table-container {
+    overflow-x: auto; /* Обеспечивает прокрутку по горизонтали */
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Intro Head', Arial, sans-serif;
+    margin: 0;
+}
+
+.schedule-table th {
+    background-color: #90AE64;
+    color: white;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details img {
+        border-radius: 15px;
+        height: 250px;
+    }
+
+    .details__contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .schedule-table thead {
+        display: none; /* Скрываем заголовок для мобильных устройств */
+    }
+
+    .schedule-table,
+    .schedule-table tbody,
+    .schedule-table tr,
+    .schedule-table td {
+        display: block; /* Делаем элементы блочными */
+        width: 100%; /* Занимаем всю ширину */
+    }
+
+    .schedule-table tr {
+        margin-bottom: 10px; /* Отступ между строками */
+    }
+
+    .schedule-table td {
+        flex: 1 1 50%;
+        box-sizing: border-box; /* Учитываем границы и отступы в размере */
+        position: relative; /* Позиционирование для псевдоэлементов */
+
+        padding-left: 50%; /* Отступ слева */
+    }
+
+    .schedule-table td:before {
+        content: attr(data-label); /* Добавляем метку из data-label */
+        position: absolute; /* Абсолютное позиционирование */
+        left: 10px; /* Расположение */
+        width: 50%; /* Ширина метки */
+        padding-right: 10px; /* Отступ справа */
+        white-space: nowrap; /* Запрет на перенос текста */
+        font-weight: bold; /* Толстый шрифт */
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 700px) {
+    .details {
+        gap: 20px;
+    }
+
+    .details__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .details__description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    .details__contact-title {
+        margin-bottom: 20px;
+    }
+
+    .details__item::after {
+        display: none; /* Убираем линии у всех элементов в вертикальном режиме */
+    }
+
+    .details__contact-item {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .details__contact-image {
+        width: 100%; /* Фиксированная ширина контейнера изображения */
+        height: auto; /* Фиксированная высота контейнера изображения */
+        overflow: hidden; /* Обрезает содержимое, выходящее за границы контейнера */
+        border-radius: 10px; /* Закругление углов контейнера (по желанию) */
+    }
+
+    .details__contact-image img {
+        width: 100%; /* Задает ширину изображения 100% от ширины контейнера */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        object-fit: cover; /* Обрезает изображение, сохраняя центральную часть */
+        object-position: center; /* Центрировать изображение в контейнере */
+    }
+
 }

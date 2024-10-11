@@ -7,22 +7,26 @@
     <meta name="description" content="Захватывающие пешие походы по самым красивым уголкам России">
 
     <link rel="stylesheet" href="styles/outlines.css">
-
+    <script src="js/scroll.js" defer></script>
     <title>Русский следопыт</title>
 </head>
 
 <body>
 <header>
     <div class="logotype">
-        <img class="logo-img" src="img/logo.png" alt="Логотип компании">
+        <a href="">
+            <img class="logo-img" src="img/logo.png" alt="Логотип компании">
+        </a>
         <div class="logo-content">
-            <b>РУССКИЙ<br>СЛЕДОПЫТ</b>
+            <a href="">
+                <b>РУССКИЙ<br>СЛЕДОПЫТ</b>
+            </a>
         </div>
     </div>
 
     <nav>
         <ul class="menu-main">
-            <li><a href="#">Главная</a></li>
+            <li class="menu-main__item"><a href="#">Главная</a></li>
             <li><a href="#">Каталог туров</a></li>
             <li><a href="#">О нас</a></li>
         </ul>
@@ -35,49 +39,186 @@
 
 <main>
     <section class="start-page">
+        <img src="img/gory_ozero_palatka.jpg" alt="Описание изображения" class="start-page__image">
         <div class="slogan">
             <h1>Вперёд по русским тропам</h1>
         </div>
 
-        <div class="button">
-            <a href="#">
-                <h3 class="button">Перейти к выбору тура</h3>
+
+            <a href="#" class="button">
+                <h3>Перейти к выбору тура</h3>
             </a>
-        </div>
+
     </section>
 
     <section class="advantages">
-        <h2>Почему мы?</h2>
-        <ul class="advantages-list">
-            <li class="list-item">
-                <h3>Безопасность</h3>
-            </li>
-            <li class="list-item">
-                <h3>Уникальные впечатления</h3>
-            </li>
-            <li class="list-item">
-                <h3>Организаторы с многолетним опытом пеших походов</h3>
-            </li>
-        </ul>
+        <h2 class="advantages__title">Почему мы?</h2>
+
+        <div class="advantages-list">
+            <div class="advantages-list__item">
+                <div class="advantages-list__item-title">
+                    <div class="advantages-list__item-icon">
+                        <img src="icons/security.svg" alt="Иконка безопасности" width="40" height="40">
+                    </div>
+                    <h3>Безопасность</h3>
+                </div>
+                <div class="advantages-list__item-description">
+                    <p> Мы проводим полные проверки всех маршрутов и обеспечиваем безопасность каждого участника. Вся
+                        необходимая информация о маршруте заранее проверяется и обновляется.</p>
+                </div>
+            </div>
+
+            <div class="advantages-list__item">
+                <div class="advantages-list__item-title">
+                    <div class="advantages-list__item-icon">
+                        <img src="icons/lamp.svg" alt="Иконка безопасности" width="40" height="40">
+                    </div>
+                    <h3>Уникальные впечатления</h3>
+                </div>
+                <div class="advantages-list__item-description">
+                    <p> Каждый маршрут разрабатывается с учетом интересов и пожеланий участников. Мы учитываем разные
+                        уровни подготовки и предпочтения, чтобы каждый мог получить максимальное удовольствие от похода.
+                    </p>
+                </div>
+            </div>
+
+            <div class="advantages-list__item">
+                <div class="advantages-list__item-title">
+                    <div class="advantages-list__item-icon">
+                        <img src="icons/people.svg" alt="Иконка безопасности" width="40" height="40">
+                    </div>
+                    <h3>Организаторы с многолетним опытом пеших походов</h3>
+                </div>
+                <div class="advantages-list__item-description">
+                    <p>Наша команда состоит из опытных проводников и организаторов, которые имеют многолетний опыт в
+                        проведении пеших походов.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section class="sales">
-        <h2>Горячие туры</h2>
+        <div class="trips__title">
+            <h2>Горячие туры</h2>
+            <a href="#" class="button">
+                <h3>Больше акций</h3>
+            </a>
+        </div>
         <div class="trips-content">
             <article class="trip-card">
-                Кавказ
+                <div class="trip-card__discount-badge"><h4>Скидка 50%</h4></div> <!-- Элемент со скидкой -->
+                <img class="trip-card__picture" alt="изображение тур-похода в горы"
+                     src="https://avatars.mds.yandex.net/i?id=36f40dea0fcf672c06154df81ffb537f_l-10637415-images-thumbs&n=13">
+                <div class="trip-card__description">
+                    <h5>Тур по Кавказу</h5>
+                    <p>
+                        Приглашаем вас на экскурсию по красотам Кавказа.
+                    </p>
+
+                    <hr/>
+
+                    <div class="trip-card__description-content">
+                        <div class="trip-card__description_icon-content">
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/calendar.svg" alt="Поиск" width="16" height="16">
+                                <p>27.10 - 09.11</p>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/rubles.svg" alt="Поиск" width="16" height="16">
+                                <p>20000 руб</p>
+                                <del>40000 руб</del>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/map.svg" alt="Поиск" width="16" height="16">
+                                <p>Кавказ</p>
+                            </div>
+                        </div>
+                        <a href="tour-1.html" class="trip-card__description-button">
+                            <h5>ЗАБРОНИРОВАТЬ</h5>
+                        </a>
+                    </div>
+                </div>
             </article>
             <article class="trip-card">
-                Урал
+                <div class="trip-card__discount-badge"><h4>Скидка 40%</h4></div> <!-- Элемент со скидкой -->
+                <img class="trip-card__picture" alt="изображение тур-похода в горы"
+                     src="https://nashural.ru/assets/uploads/4-100.jpg">
+                <div class="trip-card__description">
+                    <h5>Наш демисезонный туризм</h5>
+                    <p>
+                        Приглашаем вас на экскурсию по красотам Урала.
+                    </p>
+
+                    <hr/>
+
+                    <div class="trip-card__description-content">
+                        <div class="trip-card__description_icon-content">
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/calendar.svg" alt="Поиск" width="16" height="16">
+                                <p>27.11 - 04.12</p>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/rubles.svg" alt="Поиск" width="16" height="16">
+                                <p>6000 руб</p>
+                                <del>10000 руб</del>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/map.svg" alt="Поиск" width="16" height="16">
+                                <p>Уральские горы</p>
+                            </div>
+                        </div>
+                        <a href="#" class="trip-card__description-button">
+                            <h5>ЗАБРОНИРОВАТЬ</h5>
+                        </a>
+                    </div>
+                </div>
             </article>
             <article class="trip-card">
-                Камчатка
+                <div class="trip-card__discount-badge"><h4>Скидка 30%</h4></div> <!-- Элемент со скидкой -->
+                <img class="trip-card__picture" alt="изображение тур-похода в горы"
+                     src="https://avatars.mds.yandex.net/i?id=e5870372fa0a89951f76b5bfd3d46548_l-5221361-images-thumbs&n=13">
+                <div class="trip-card__description">
+                    <h5>Камчатка - земля вулканов</h5>
+                    <p>
+                        Приглашаем вас исследовать уникальную природу Камчатки, ее вулканы и горячие источники.
+                    </p>
+
+                    <hr/>
+
+                    <div class="trip-card__description-content">
+                        <div class="trip-card__description_icon-content">
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/calendar.svg" alt="Поиск" width="16" height="16">
+                                <p>15.10 - 25.10</p>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/rubles.svg" alt="Поиск" width="16" height="16">
+                                <p>26600 руб</p>
+                                <del>38000 руб</del>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/map.svg" alt="Поиск" width="16" height="16">
+                                <p>Камчатка</p>
+                            </div>
+                        </div>
+                        <a href="#" class="trip-card__description-button">
+                            <h5>ЗАБРОНИРОВАТЬ</h5>
+                        </a>
+                    </div>
+                </div>
             </article>
         </div>
     </section>
 
     <section class="trips">
-        <h2>Подборка туров</h2>
+        <div class="trips__title">
+            <h2>Подборка туров</h2>
+            <a href="#" class="button">
+                <h3>Все туры</h3>
+            </a>
+        </div>
         <div class="trips-content">
             <article class="trip-card">
                 <img class="trip-card__picture" src="img/image-1.jpeg" alt="изображение тур-похода в горы">
@@ -105,69 +246,116 @@
                                 <p>Карелия</p>
                             </div>
                         </div>
-                        <div class="trip-card__description-button">
+                        <a href="#" class="trip-card__description-button">
                             <h5>ЗАБРОНИРОВАТЬ</h5>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </article>
             <article class="trip-card">
-                <img class="trip-card__picture" src="img/image-1.jpeg" alt="изображение тур-похода в горы">
+                <img class="trip-card__picture" alt="изображение алтайского тура"
+                     src="https://avatars.mds.yandex.net/i?id=12d7014a8f7abba685da4ddf093533b88134e1f0-12373000-images-thumbs&n=13">
                 <div class="trip-card__description">
-                    <h5>Тур по Карелии</h5>
-                    <p>
-                        Приглашаем вас на экскурсию по красотам Карелии. Северная природа, свежий воздух и
-                        красочные пейзажи подарят вам яркие впечатления и отдых от суеты рабочих будней.
-                    </p>
-
-                    <hr>
-
+                    <h5>Алтай - красивая земля</h5>
+                    <p>Присоединяйтесь к нашему туру по живописным местам Алтая.</p>
+                    <hr/>
                     <div class="trip-card__description-content">
                         <div class="trip-card__description_icon-content">
                             <div class="trip-card__description_icon-content-item">
-                                <img src="icons/calendar.svg" alt="Поиск" width="16" height="16">
-                                <p>25.10 - 29.10</p>
+                                <img src="icons/calendar.svg" alt="Календарь" width="16" height="16">
+                                <p>10.02 - 20.02</p>
                             </div>
                             <div class="trip-card__description_icon-content-item">
-                                <img src="icons/rubles.svg" alt="Поиск" width="16" height="16">
-                                <p>2000 руб</p>
+                                <img src="icons/rubles.svg" alt="Цены" width="16" height="16">
+                                <p>25000 руб</p>
                             </div>
                             <div class="trip-card__description_icon-content-item">
-                                <img src="icons/map.svg" alt="Поиск" width="16" height="16">
-                                <p>Карелия</p>
+                                <img src="icons/map.svg" alt="Карта" width="16" height="16">
+                                <p>Алтай</p>
                             </div>
                         </div>
-                        <div class="trip-card__description-button">
+                        <a href="#" class="trip-card__description-button">
                             <h5>ЗАБРОНИРОВАТЬ</h5>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </article>
             <article class="trip-card">
-                Кавказ
-            </article>
-            <article class="trip-card">
-                Урал
-            </article>
-            <article class="trip-card">
-                Камчатка
-            </article>
-            <article class="trip-card">
-                Алтай
+                <img class="trip-card__picture" alt="изображение тура по сахалину"
+                     src="https://avatars.mds.yandex.net/i?id=2e66ef25a4fd6716412586b4f3548f9beb911d7a-12569754-images-thumbs&n=13">
+                <div class="trip-card__description">
+                    <h5>Сахалин - жемчужина Дальнего Востока</h5>
+                    <p>Посетите удивительный Сахалин, его удивительные пейзажи и уникальную флору и фауну.</p>
+                    <hr/>
+                    <div class="trip-card__description-content">
+                        <div class="trip-card__description_icon-content">
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/calendar.svg" alt="Календарь" width="16" height="16">
+                                <p>05.05 - 12.05 (2025)</p>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/rubles.svg" alt="Цены" width="16" height="16">
+                                <p>80000 руб</p>
+                            </div>
+                            <div class="trip-card__description_icon-content-item">
+                                <img src="icons/map.svg" alt="Карта" width="16" height="16">
+                                <p>Сахалин</p>
+                            </div>
+                        </div>
+                        <a href="#" class="trip-card__description-button">
+                            <h5>ЗАБРОНИРОВАТЬ</h5>
+                        </a>
+                    </div>
+                </div>
             </article>
         </div>
     </section>
 
     <section class="blog">
-        <h2>Блог</h2>
+        <div class="blog__title">
+            <h2>Блог</h2>
+            <a href="#" class="button">
+                <h3>Все новости</h3>
+            </a>
+        </div>
+
+        <div class="blog-content">
+            <div class="blog-content__item">
+                <a href="#">
+                    <img src="https://avatars.mds.yandex.net/i?id=e55101fd28da84168a6bc3997eece603_l-5229607-images-thumbs&ref=rim&n=13&w=1600&h=1067"
+                         alt="Описание изображения" class="blog-content__image">
+                    <p class="blog-content__date">10.10.2024</p>
+                    <h4>Наш первый поход в Алтае</h4>
+                </a>
+            </div>
+            <div class="blog-content__item">
+                <a href="#">
+                    <img src="https://avatars.mds.yandex.net/i?id=4e21111fd261b4a6e0b1e9d3a102c975_l-5540534-images-thumbs&n=13"
+                         alt="Описание изображения" class="blog-content__image">
+                    <p class="blog-content__date">15.10.2024</p>
+                    <h4>Как выжить одному в дикой природе</h4>
+                </a>
+            </div>
+            <div class="blog-content__item">
+                <a href="#">
+                    <img src="https://avatars.mds.yandex.net/i?id=978cedcc6fa22406b4a7593479ad9c4b_l-8175992-images-thumbs&n=13"
+                         alt="Описание изображения" class="blog-content__image">
+                    <p class="blog-content__date">16.10.2024</p>
+                    <h4>Гайд: как быстро собраться в поход</h4>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section class="details">
-        <h2>Познакомьтесь с нами поближе</h2>
+
+    <section class="acquaintance">
+        <h2 class="acquaintance__title">Познакомьтесь с нами поближе</h2>
         <p>
             <strong>ВЫ<sup>2</sup> + МЫ<sup>2</sup> = (НЕЗАБЫВАЕМЫЕ ВПЕЧАТЛЕНИЯ)<sup>2</sup></strong>
         </p>
     </section>
+    <button class="scroll-to-top" onclick="scrollToTop()"><h3>Вверх</h3></button>
+    <script src="js/scroll.js"></script>
 </main>
 
 <footer>
@@ -179,7 +367,11 @@
         <li>
             <h3>Меню</h3>
         </li>
+        <li>
+            <p class="footer__copyright">&copy; 2023 - 2024 &nbsp; Турагентство "Русский следопыт". Все права защищены.</p>
+        </li>
     </ul>
+
 </footer>
 </body>
 </html>
