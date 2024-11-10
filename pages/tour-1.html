@@ -6,19 +6,23 @@
     <meta name="keywords" content="путешествия, туризм, походы">
     <meta name="description" content="Захватывающие пешие походы по самым красивым уголкам России">
 
-    <link rel="stylesheet" href="styles/outlines.css">
-    <script src="js/scroll.js" defer></script>
+    <link rel="stylesheet" href="../styles/outlines.css">
+    <script src="../js/scroll.js" defer></script>
+    <script src="../js/loading.js" defer></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <title>Русский следопыт</title>
 </head>
 
 <body>
 <header>
     <div class="logotype">
-        <a href="">
-            <img class="logo-img" src="img/logo.png" alt="Логотип компании">
+        <a href="../index.html">
+            <img class="logo-img" src="../img/logo.png" alt="Логотип компании">
         </a>
         <div class="logo-content">
-            <a href="">
+            <a href="../index.html">
                 <b>РУССКИЙ<br>СЛЕДОПЫТ</b>
             </a>
         </div>
@@ -26,9 +30,9 @@
 
     <nav>
         <ul class="menu-main">
-            <li class="menu-main__item"><a href="index.html">Главная</a></li>
-            <li><a href="#">Каталог туров</a></li>
-            <li><a href="#">О нас</a></li>
+            <li><a href="catalog.html">Каталог туров</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
         </ul>
     </nav>
 
@@ -90,7 +94,7 @@
 
             <div class="details__contact-image">
                 <img alt="Лучший менеджер года"
-                     src="img/photo_men_1.jpg">
+                     src="../img/photo_men_1.jpg">
             </div>
 
         </article>
@@ -108,11 +112,57 @@
 
             <div class="details__contact-image">
                 <img alt="Лучший менеджер года"
-                     src="img/photo_men_1.jpg">
+                     src="../img/photo_men_1.jpg">
             </div>
 
         </article>
     </section>
+
+    <section class="gallery">
+        <div class="gallery-slider swiper-container">
+            <div class="gallery-slider__wrapper swiper-wrapper">
+                <div class="gallery-slider__slider swiper-slide">
+                    <img src="https://i.pinimg.com/736x/12/87/3f/12873f2a34e7113682466e0c7dc6c8e0.jpg" alt="Описание изображения 1" />
+                    <br>
+                    <h4>Кавказ: мир, где сбываются мечты</h4>
+                    <p>Откройте для себя чарующее очарование гор и красоту их дикой природы.</p>
+                </div>
+                <div class="gallery-slider__slider swiper-slide">
+                    <img src="https://i.pinimg.com/236x/c8/4e/ab/c84eab907eaa7b1da20a60f6466ce223.jpg" alt="Описание изображения 2" />
+                    <br>
+                    <h4>Приключение вокруг каждого поворота</h4>
+                    <p>Впереди ждут неожиданные красоты и новые открытия, о которых стоит рассказать.</p>
+                </div>
+                <div class="gallery-slider__slider swiper-slide">
+                    <img src="https://i.pinimg.com/236x/0e/68/58/0e6858324d0c99b4c569696050fa555d.jpg" alt="Описание изображения 3" />
+                    <br><h4>Лошади — наши верные спутники</h4>
+                    <p>Ощутите свободу и радость, путешествуя верхом по великолепным кавказским просторам.</p>
+                </div>
+                <div class="gallery-slider__slider swiper-slide">
+                    <img src="https://i.pinimg.com/474x/5f/78/c9/5f78c980a2c805a5baeab6a94166f8a5.jpg" alt="Описание изображения 4" />
+                    <br>
+                    <h4>Приключения в горах</h4>
+                    <p>Исследуйте удивительные маршруты, которые открывают незабываемые приключения и захватывающие моменты.</p>
+                </div>
+                <div class="gallery-slider__slider swiper-slide">
+                    <img src="https://i.pinimg.com/736x/fc/77/54/fc77543e4d7d0ef185ed58b3d56e32c5.jpg" alt="Описание изображения 5" />
+                    <br>
+                    <h4>Величественные горы Кавказа</h4>
+                    <p>Откройте для себя бескрайние просторы и вдохновляющие виды, которые завораживают с каждым взглядом.</p>
+                </div>
+            </div>
+
+
+            <!-- Пагинация (если нужна) -->
+            <div class="swiper-scrollbar-drag"></div>
+        </div>
+
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/sliderSwiper.js"></script>
+
 
     <section class="table-container">
         <div class="trips__title">
@@ -247,12 +297,12 @@
     </section>
 
     <button class="scroll-to-top" onclick="scrollToTop()"><h3>Вверх</h3></button>
-    <script src="js/scroll.js"></script>
+    <script src="../js/scroll.js"></script>
 </main>
 
 <footer>
     <div class="logotype">
-        <img src="img/logo.png" alt="Логотип компании">
+        <img src="../img/logo.png" alt="Логотип компании">
     </div>
 
     <ul class="footer-menu">
@@ -260,6 +310,7 @@
             <p class="footer__copyright">
                 &copy; 2023 - 2024 &nbsp; Турагентство "Русский следопыт". Все права защищены.
             </p>
+            <p id="loading-info" class="footer__loading"></p>
         </li>
     </ul>
 

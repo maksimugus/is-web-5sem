@@ -141,6 +141,166 @@ header {
     font-family: 'Miroslav Regular', Arial, sans-serif;
 }
 
+.menu-main a:hover,
+.authorization h4:hover{
+    background-color: #6a6a6a;
+    color: #C2D97E;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.active {
+    font-weight: bold;
+    color: #486120;
+    border-bottom: 2px solid #486120;
+    padding: 10px;
+}
+
+.footer__loading {
+    display: inline-block;
+    border-bottom: 1px dotted #C2D97E; /* Подчеркивание в виде точек */
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+}
+
+.team__group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team__item {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.team__item-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.team__item-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.team__item-description {
+    padding-top: 20px;
+}
+
+.team__item-description h5 {
+    color: #6a6a6a;
+}
+
+.team h2 {
+    margin-bottom: 40px;
+}
+
+.reviews_title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 50%;
+
+    font-size: 16px;
+    font-family: 'Intro Head', Arial, sans-serif;
+}
+
+button {
+    font-size: 16px;
+    font-family: 'Intro Head', Arial, sans-serif;
+    padding: 10px;
+    background-color: #C2D97E;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reviewsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 40px;
+}
+
+.review p {
+    padding-bottom: 5px;
+}
+
+.review__icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+#preloader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews_preloader {
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    gap: 40px;
+}
+
+.reviewsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.reviews_container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media (max-width: 900px) {
+    .team__group {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 700px) {
     main {
         padding: 0 30px;
@@ -170,34 +330,55 @@ header {
         justify-content: flex-start;
     }
 
+    .team__group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .team__group {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .reviews_title {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .start-page {
     display: flex;
-    flex-direction: column; /* Вертикальное расположение */
-    align-items: center; /* Горизонтальное центрирование */
-    justify-content: center; /* Вертикальное центрирование */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
     position: relative;
     width: 100%;
-    height: 450px; /* Высота на всю высоту экрана */
-    overflow: hidden; /* Скрыть переполнение */
+    height: 450px;
+    overflow: hidden;
 
     border-radius: 15px;
 }
 
 .start-page__image {
-    position: absolute; /* Позволяет изображению разместиться поверх секции */
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Обложка, чтобы изображение заполнило всю секцию */
-    transform: translate(-50%, -50%); /* Центрирование изображения */
+    object-fit: cover;
+    transform: translate(-50%, -50%);
     z-index: -1;
-    filter: blur(1px); /* Добавление размытия */
-    opacity: 0.7; /* Уровень прозрачности для дымки */
+    filter: blur(1px);
+    opacity: 0.7;
 }
 
 .start-page p,
@@ -334,19 +515,17 @@ header {
 }
 
 .trip-card__discount-badge {
-    position: absolute; /* Абсолютное позиционирование */
-
-    background-color: #eb403d; /* Красный фон */
-    color: #000000; /* Черный текст */
-    padding: 10px 15px; /* Отступы внутрь */
-    border-radius: 15px 0 15px 0; /* Скругление углов */
-
+    position: absolute;
+    background-color: #eb403d;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 15px 0 15px 0;
     z-index: 1; /* Чтобы элемент был на переднем плане */
 }
 
 .trip-card__picture {
-    width: 100%; /* Полная ширина родительского элемента */
-    border-radius: 15px 15px 0 0; /* Скругление верхних углов */
+    width: 100%;
+    border-radius: 15px 15px 0 0;
     height: 300px;
     object-fit: cover;
 }
@@ -451,8 +630,8 @@ header {
 .blog-content__image {
     border-radius: 15px;
     width: 100%;
-    height: 300px; /* Установите фиксированную высоту для всех изображений */
-    object-fit: cover; /* Заполнение контейнера с сохранением пропорций */
+    height: 300px;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
@@ -475,6 +654,10 @@ footer {
     gap: 20px;
 }
 
+.footer__copyright {
+    padding-bottom: 10px;
+}
+
 .scroll-to-top {
     position: fixed;
     bottom: 60px;
@@ -489,7 +672,7 @@ footer {
 }
 
 .scroll-to-top:hover {
-    background-color: #90AE64; /* Цвет фона при наведении */
+    background-color: #90AE64;
 }
 
 /* Туры */
@@ -606,7 +789,7 @@ footer {
 }
 
 .table-container {
-    overflow-x: auto; /* Обеспечивает прокрутку по горизонтали */
+    overflow-x: auto;
 }
 
 .schedule-table {
@@ -696,7 +879,7 @@ footer {
 }
 
 /* Адаптивность */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .details {
         gap: 20px;
     }
@@ -728,16 +911,119 @@ footer {
     }
 
     .details__contact-image {
-        width: 100%; /* Фиксированная ширина контейнера изображения */
-        height: auto; /* Фиксированная высота контейнера изображения */
-        overflow: hidden; /* Обрезает содержимое, выходящее за границы контейнера */
-        border-radius: 10px; /* Закругление углов контейнера (по желанию) */
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 10px;
     }
 
     .details__contact-image img {
-        width: 100%; /* Задает ширину изображения 100% от ширины контейнера */
-        height: auto; /* Автоматическая высота для сохранения пропорций */
+        width: 100%;
+        height: auto;
         object-fit: cover; /* Обрезает изображение, сохраняя центральную часть */
         object-position: center; /* Центрировать изображение в контейнере */
     }
 }
+
+
+.swiper-scrollbar-drag {
+    cursor: pointer;
+    background-color: #6C4795;
+}
+
+.gallery-slider__slider {
+    display: flex;
+    padding: 40px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Обтягивание с сохранением пропорций */
+}
+
+.gallery-slider__slider img {
+    border-radius: 10px;
+}
+
+.gallery-slider__slider h4 {
+    margin-top: 20px;
+}
+
+.gallery-slider__slider p {
+    width: 50%;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about__description {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #EBF9D6;
+
+    justify-content: center;
+}
+
+.about__description,
+.about__image img {
+    border-radius: 10px;
+}
+
+.about__image {
+    display: flex;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.about__image-item {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    object-fit: cover;
+}
+
+.about__description h1 {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto; /* Автоматическая высота */
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column; /* Вертикальная компоновка */
+    align-items: center; /* Центрировать содержимое */
+}
+
+.swiper-slide img {
+    width: 50%; /* Адаптивная ширина */
+    height: auto; /* Автоматическая высота */
+    max-height: 400px; /* Ограничение максимальной высоты изображения */
+    object-fit: cover; /* Обтягивание с сохранением пропорций */
+}
+

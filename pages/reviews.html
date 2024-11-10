@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <meta name="keywords" content="путешествия, туризм, походы">
+    <meta name="description" content="Захватывающие пешие походы по самым красивым уголкам России">
+
+    <link rel="stylesheet" href="../styles/outlines.css">
+    <script src="../js/scroll.js" defer></script>
+    <script src="../js/loading.js" defer></script>
+    <title>Русский следопыт | Отзывы</title>
+</head>
+
+<body>
+<header>
+    <div class="logotype">
+        <a href="../index.html">
+            <img class="logo-img" src="../img/logo.png" alt="Логотип компании">
+        </a>
+        <div class="logo-content">
+            <a href="../index.html">
+                <b>РУССКИЙ<br>СЛЕДОПЫТ</b>
+            </a>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="menu-main">
+            <li><a href="catalog.html">Каталог туров</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="#" class="active">Отзывы</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="authorization">
+        <a href="#"><h4>Вход</h4></a>
+    </div>
+</header>
+
+<main>
+
+    <section class="reviews">
+        <div class="reviews_title">
+            <h1>Ваши отзывы</h1>
+            <p>Мы гордимся тем, что наши клиенты всегда остаются довольны своим опытом с нашим агентством.
+                Вот что они говорят о своих путешествиях и о нас</p>
+        </div>
+
+        <div class="reviews_container">
+            <h1>Оставьте свой отзыв</h1>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Оценка:</label>
+                    <select id="rating" required>
+                        <option value="">Выберите оценку</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review">Отзыв:</label>
+                    <textarea id="review" rows="3" required></textarea>
+                </div>
+                <button type="submit">Отправить отзыв</button>
+            </form>
+
+            <h2>Отзывы клиентов</h2>
+            <div id="reviewsList"></div>
+        </div>
+        <script src="../js/reviews.js"></script>
+
+        <div id="preloader" class="reviews_preloader">
+            <img src="https://media1.tenor.com/m/dXy7Obywvr8AAAAd/no-brain-loading.gif" alt="Loading..."> <!-- Замените на ваш GIF -->
+        </div>
+        <script src="../js/fetchReviews.js" defer></script>
+
+    </section>
+
+
+    <section class="advantages">
+        <h2 class="advantages__title">Почему мы?</h2>
+
+        <div class="advantages-list">
+            <div class="advantages-list__item">
+                <div class="advantages-list__item-title">
+                    <div class="advantages-list__item-icon">
+                        <img src="../icons/security.svg" alt="Иконка безопасности" width="40" height="40">
+                    </div>
+                    <h3>Безопасность</h3>
+                </div>
+                <div class="advantages-list__item-description">
+                    <p> Мы проводим полные проверки всех маршрутов и обеспечиваем безопасность каждого участника. Вся
+                        необходимая информация о маршруте заранее проверяется и обновляется.</p>
+                </div>
+            </div>
+
+            <div class="advantages-list__item">
+                <div class="advantages-list__item-title">
+                    <div class="advantages-list__item-icon">
+                        <img src="../icons/lamp.svg" alt="Иконка безопасности" width="40" height="40">
+                    </div>
+                    <h3>Уникальные впечатления</h3>
+                </div>
+                <div class="advantages-list__item-description">
+                    <p> Каждый маршрут разрабатывается с учетом интересов и пожеланий участников. Мы учитываем разные
+                        уровни подготовки и предпочтения, чтобы каждый мог получить максимальное удовольствие от похода.
+                    </p>
+                </div>
+            </div>
+
+            <div class="advantages-list__item">
+                <div class="advantages-list__item-title">
+                    <div class="advantages-list__item-icon">
+                        <img src="../icons/people.svg" alt="Иконка безопасности" width="40" height="40">
+                    </div>
+                    <h3>Организаторы с многолетним опытом пеших походов</h3>
+                </div>
+                <div class="advantages-list__item-description">
+                    <p>Наша команда состоит из опытных проводников и организаторов, которые имеют многолетний опыт в
+                        проведении пеших походов.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <h3>Вверх</h3>
+    </button>
+    <script src="../js/scroll.js"></script>
+</main>
+
+<footer>
+    <div class="logotype">
+        <img src="../img/logo.png" alt="Логотип компании">
+    </div>
+
+    <ul class="footer-menu">
+        <li>
+            <p class="footer__copyright">
+                &copy; 2023 - 2024 &nbsp; Турагентство "Русский следопыт". Все права защищены.
+            </p>
+            <p id="loading-info" class="footer__loading"></p>
+        </li>
+    </ul>
+
+</footer>
+</body>
+</html>
