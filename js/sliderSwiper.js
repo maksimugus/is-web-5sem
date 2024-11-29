@@ -1,16 +1,19 @@
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper', {
     loop: true,
-
     autoplay: {
-        delay: 3000,
+        delay: 4000,
     },
 
     simulateTouch: true,
-    touchRatio: 1,
-    touchAngle: 30,
+    touchRatio: 2,
+    touchAngle: 40,
     grabCursor: true,
 
     slideToClickedSlide: true,
+
+    hashNavigation: {
+        watchState: true,
+    },
 
     keyboard: {
         enabled: true,
@@ -22,5 +25,5 @@ const swiper = new Swiper('.swiper-container', {
         sensitivity: 1,
     },
 
-    slidesPerView: 1.5,
+    slidesPerView: 1,
 });

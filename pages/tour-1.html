@@ -7,10 +7,9 @@
     <meta name="description" content="Захватывающие пешие походы по самым красивым уголкам России">
 
     <link rel="stylesheet" href="../styles/outlines.css">
-    <script src="../js/scroll.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
     <script src="../js/loading.js" defer></script>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <title>Русский следопыт</title>
 </head>
@@ -119,8 +118,8 @@
     </section>
 
     <section class="gallery">
-        <div class="gallery-slider swiper-container">
-            <div class="gallery-slider__wrapper swiper-wrapper">
+        <div class="gallery_swiper swiper">
+            <div class="swiper-wrapper">
                 <div class="gallery-slider__slider swiper-slide">
                     <img src="https://i.pinimg.com/736x/12/87/3f/12873f2a34e7113682466e0c7dc6c8e0.jpg" alt="Описание изображения 1" />
                     <br>
@@ -151,18 +150,11 @@
                     <p>Откройте для себя бескрайние просторы и вдохновляющие виды, которые завораживают с каждым взглядом.</p>
                 </div>
             </div>
-
-
-            <!-- Пагинация (если нужна) -->
-            <div class="swiper-scrollbar-drag"></div>
         </div>
-
     </section>
 
-    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../js/sliderSwiper.js"></script>
-
 
     <section class="table-container">
         <div class="trips__title">
@@ -296,7 +288,9 @@
         </table>
     </section>
 
-    <button class="scroll-to-top" onclick="scrollToTop()"><h3>Вверх</h3></button>
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <h3>Вверх</h3>
+    </button>
     <script src="../js/scroll.js"></script>
 </main>
 
@@ -313,7 +307,6 @@
             <p id="loading-info" class="footer__loading"></p>
         </li>
     </ul>
-
 </footer>
 </body>
 </html>
